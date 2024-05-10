@@ -21,7 +21,7 @@
 </style>
 </head>
 <body>
-<canvas id="gameCanvas" width="600" height="400"></canvas>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
 <script>
     // Game variables
     var canvas = document.getElementById("gameCanvas");
@@ -37,7 +37,7 @@
     var enemyHeight = 40;
     var enemySpeed = 2;
     var bulletSpeed = 10;
-    var enemySpawnRate = 3000;
+    var enemySpawnRate = 2500;
     var score = 0;
     var gameInterval;
 
@@ -51,6 +51,37 @@
             fireBullet();
         }
     });
+
+    canvas.addEventListener("touchstart", handleTouchStart);
+    canvas.addEventListener("touchmove", handleTouchMove);
+    canvas.addEventListener("touchend", handleTouchEnd);
+
+    var touchStartX = 0;
+    var touchMoveX = 0;
+
+    function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+        event.preventDefault();
+    }
+
+    function handleTouchMove(event) {
+        touchMoveX = event.touches[0].clientX;
+        event.preventDefault();
+    }
+
+    function handleTouchEnd(event) {
+        var swipeDistance = touchMoveX - touchStartX;
+        if (swipeDistance > 0 && player.x < canvas.width - player.width) {
+            player.x += 10;
+        } else if (swipeDistance < 0 && player.x > 0) {
+            player.x -= 10;
+        } else {
+            fireBullet();
+        }
+        touchStartX = 0;
+        touchMoveX = 0;
+        event.preventDefault();
+    }
 
     // Function to create a new bullet
     function fireBullet() {
