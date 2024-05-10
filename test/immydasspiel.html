@@ -41,37 +41,43 @@
     var score = 0;
     var gameInterval;
 
-    // Event listeners
-    canvas.addEventListener("touchstart", handleTouchStart);
-    canvas.addEventListener("touchmove", handleTouchMove);
-    canvas.addEventListener("touchend", handleTouchEnd);
+ // Event listeners
+canvas.addEventListener("touchstart", handleTouchStart);
+canvas.addEventListener("touchmove", handleTouchMove);
+canvas.addEventListener("touchend", handleTouchEnd);
 
-    var touchStartX = 0;
-    var touchMoveX = 0;
+var touchStartX = 0;
+var touchMoveX = 0;
 
-    function handleTouchStart(event) {
-        touchStartX = event.touches[0].clientX;
-        event.preventDefault();
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+    event.preventDefault();
+}
+
+function handleTouchMove(event) {
+    touchMoveX = event.touches[0].clientX;
+    event.preventDefault();
+}
+
+function handleTouchEnd(event) {
+    var swipeDistance = touchMoveX - touchStartX;
+    if (swipeDistance > 0 && player.x < canvas.width - player.width) {
+        player.x += 10;
+    } else if (swipeDistance < 0 && player.x > 0) {
+        player.x -= 10;
     }
+    touchStartX = 0;
+    touchMoveX = 0;
+    event.preventDefault();
+}
 
-    function handleTouchMove(event) {
-        touchMoveX = event.touches[0].clientX;
-        event.preventDefault();
-    }
+canvas.addEventListener("touchstart", handleTouchStartShooting);
 
-    function handleTouchEnd(event) {
-        var swipeDistance = touchMoveX - touchStartX;
-        if (swipeDistance > 0 && player.x < canvas.width - player.width) {
-            player.x += 10;
-        } else if (swipeDistance < 0 && player.x > 0) {
-            player.x -= 10;
-        } else {
-            fireBullet();
-        }
-        touchStartX = 0;
-        touchMoveX = 0;
-        event.preventDefault();
-    }
+function handleTouchStartShooting(event) {
+    fireBullet();
+    event.preventDefault();
+}
+
 
     // Function to create a new bullet
     function fireBullet() {
