@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +10,18 @@
         /* Global Styles */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f8f8f8;
             color: #333;
+            overflow: hidden;
         }
         /* Container Styles */
         .container {
-            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Added for positioning the cats */
         }
         h1 {
             font-size: 24px;
@@ -61,11 +62,6 @@
             margin-bottom: 20px;
         }
         /* Cat Animation Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevent scrolling while cats are falling */
-        }
         .cat {
             position: absolute;
             pointer-events: none; /* Prevent cats from interfering with user interaction */
@@ -84,7 +80,7 @@
 <body>
 
 <!-- Trigger Element for the Easter Egg -->
-<button style="height: 30px; width: 100px; margin-left: 10px;" id="cat-flood-trigger">Don't Press!!!</button>
+<button style="margin-left: 10px;" id="cat-flood-trigger">Don't Press!!!</button>
 
 <!-- JavaScript for Cat Animation -->
 <script>
@@ -99,14 +95,25 @@
             cat.src = 'flocki.png'; // Replace 'cat_image_url.jpg' with the URL of your cat image
             cat.classList.add('cat');
             cat.style.left = Math.random() * bodyWidth + 'px'; // Random horizontal position
-            cat.style.top = Math.random() * bodyHeight + 'px'; // Random vertical position
-            cat.style.animationDuration = (Math.random() * 1 + 3) + 's'; // Randomize animation duration
-            cat.style.animationTimingFunction = 'cubic-bezier(0.68, 0.17, 0.27, 1.44)'; // Custom easing function for realistic physics
-            cat.style.opacity = Math.random(); // Randomize opacity for each cat
+            cat.style.top = -50 + Math.random() * bodyHeight + 'px'; // Random vertical position with initial offset
+            cat.style.animationDuration = (Math.random() * 5 + 1) + 's'; // Randomize animation duration
+            cat.style.animationTimingFunction = 'cubic-bezier(' + Math.random() + ')'; // Random easing function
+            cat.style.opacity = 0.2+Math.random(); // Randomize opacity for each cat
+            
+            // Randomize rotation direction
+            const rotationDirection = Math.random() < 0.5 ? 'normal' : 'reverse'; // Randomly set clockwise or counterclockwise
+            cat.style.animationDirection = rotationDirection; // Set rotation direction
+            
             container.appendChild(cat);
         }
     });
 </script>
+
+</body>
+</html>
+
+
+
 
 <!-- Main Content -->
 <div class="container">
