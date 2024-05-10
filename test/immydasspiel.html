@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galactic Defender</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+    }
+
+    canvas {
+        border: 2px solid white;
+    }
+</style>
+</head>
+<body>
+<canvas id="gameCanvas" width="600" height="400"></canvas>
+<script>
+    // Game variables
+    var canvas = document.getElementById("gameCanvas");
+    var ctx = canvas.getContext("2d");
+    var playerImage = new Image();
+    playerImage.src = "golf.png"; // Replace "spaceship.png" with your spaceship image path
+    var enemyImage = new Image();
+    enemyImage.src = "mkl.png"; // Replace "enemy.png" with your enemy image path
+    var player = { x: canvas.width / 2 - 25, y: canvas.height - 80, width: 100, height: 100 };
+    var bullets = [];
+    var enemies = [];
+    var enemyWidth = 50;
+    var enemyHeight = 40;
+    var enemySpeed = 2;
+    var bulletSpeed = 10;
+    var enemySpawnRate = 3000;
+    var score = 0;
+    var gameInterval;
+
+    // Event listeners
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft" && player.x > 0) {
+            player.x -= 10;
+        } else if (event.key === "ArrowRight" && player.x < canvas.width - player.width) {
+            player.x += 10;
+        } else if (event.key === " ") {
+            fireBullet();
+        }
+    });
+
+    // Function to create a new bullet
+    function fireBullet() {
+        bullets.push({ x: player.x + player.width / 2, y: player.y, width: 2, height: 10 });
+    }
+
+    // Function to create a new enemy
+    function spawnEnemy() {
+        var x = Math.floor(Math.random() * (canvas.width - enemyWidth));
+        enemies.push({ x: x, y: 0, width: enemyWidth, height: enemyHeight });
+    }
+
+    // Function to draw the player
+    function drawPlayer() {
+        ctx.drawImage(playerImage, player.x, player.y, player.width, player.height);
+    }
+
+    // Function to draw bullets
+    function drawBullets() {
+        ctx.fillStyle = "white";
+        bullets.forEach(function(bullet) {
+            ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+        });
+    }
+
+    // Function to draw enemies
+    function drawEnemies() {
+        enemies.forEach(function(enemy) {
+            ctx.drawImage(enemyImage, enemy.x, enemy.y, enemy.width, enemy.height);
+        });
+    }
+
+    // Function to move bullets
+    function moveBullets() {
+        bullets.forEach(function(bullet) {
+            bullet.y -= bulletSpeed;
+        });
+    }
+
+    // Function to move enemies
+    function moveEnemies() {
+        enemies.forEach(function(enemy) {
+            enemy.y += enemySpeed;
+        });
+    }
+
+    // Function to handle collisions
+    function handleCollisions() {
+        for (var i = 0; i < bullets.length; i++) {
+            for (var j = 0; j < enemies.length; j++) {
+                if (bullets[i] && enemies[j] &&
+                    bullets[i].x < enemies[j].x + enemies[j].width &&
+                    bullets[i].x + bullets[i].width > enemies[j].x &&
+                    bullets[i].y < enemies[j].y + enemies[j].height &&
+                    bullets[i].y + bullets[i].height > enemies[j].y) {
+                    bullets.splice(i, 1);
+                    enemies.splice(j, 1);
+                    score++;
+                }
+            }
+        }
+    }
+
+    // Function to update the game
+    function update() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawPlayer();
+        drawBullets();
+        drawEnemies();
+
+        moveBullets();
+        moveEnemies();
+
+        handleCollisions();
+
+        // Check for game over
+        if (enemies.some(enemy => enemy.y + enemy.height >= player.y)) {
+            clearInterval(gameInterval);
+            ctx.fillStyle = "white";
+            ctx.font = "30px Arial";
+            ctx.fillText("Game Over! Score: " + score, canvas.width / 2 - 150, canvas.height / 2 - 15);
+        }
+    }
+
+    // Function to start the game
+    function startGame() {
+        gameInterval = setInterval(update, 30);
+        setInterval(spawnEnemy, enemySpawnRate);
+    }
+
+    // Start the game
+    startGame();
+</script>
+</body>
+</html>
