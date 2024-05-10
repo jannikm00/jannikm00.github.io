@@ -21,7 +21,7 @@
 </style>
 </head>
 <body>
-<canvas id="gameCanvas" width="800" height="600"></canvas>
+<canvas id="gameCanvas" width="1000" height="600"></canvas>
 <script>
     // Game variables
     var canvas = document.getElementById("gameCanvas");
@@ -37,14 +37,17 @@
     var enemyHeight = 40;
     var enemySpeed = 2;
     var bulletSpeed = 10;
-    var enemySpawnRate = 2500;
+    var enemySpawnRate = 3000;
     var score = 0;
     var gameInterval;
 
-    // Event listener for shooting
-    window.addEventListener("keydown", function(event) {
-        // Check if the pressed key is the volume up button
-        if (event.key === "ArrowUp") {
+    // Event listeners
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft" && player.x > 0) {
+            player.x -= 10;
+        } else if (event.key === "ArrowRight" && player.x < canvas.width - player.width) {
+            player.x += 10;
+        } else if (event.key === " ") {
             fireBullet();
         }
     });
