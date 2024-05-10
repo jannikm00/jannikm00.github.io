@@ -8,12 +8,13 @@
         /* Global Styles */
         body {
             font-family: Arial, sans-serif;
-
+            margin: 0;
             padding: 0;
             background-color: #f8f8f8;
             color: #333;
-            overflow:hidden;
+            overflow: hidden; /* Prevent scrollbar */
         }
+
         /* Container Styles */
         .container {
             max-width: 800px;
@@ -22,52 +23,63 @@
             background-color: #fff;
             border-radius: 28px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-/* Added for positioning the cats */
+            position: relative;
+            overflow: hidden;
         }
+
         h1 {
             font-size: 24px;
             margin-bottom: 20px;
         }
+
         p {
             margin-top: 0;
             margin-bottom: 15px;
             color: #666;
         }
+
         a {
-            color: #007bff;
+            color: #007fff;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .icon {
             width: 50px;
             height: auto;
             vertical-align: middle;
             margin-right: 10px;
         }
+
         .profile-link {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
+
         .profile-link img {
             width: 40px;
             height: 40px;
             margin-right: 10px;
             border-radius: 50%;
         }
-        .project {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+
+        .project, .profile-link {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
         }
+
         /* Cat Animation Styles */
         .cat {
             position: absolute;
             pointer-events: none; /* Prevent cats from interfering with user interaction */
             animation: fall linear infinite; /* Apply falling animation */
         }
+
         @keyframes fall {
             0% {
                 transform: translateY(-50px) rotate(0deg); /* Initial position and rotation */
@@ -76,18 +88,41 @@
                 transform: translateY(calc(100vh + 50px)) rotate(360deg); /* Final position and rotation */
             }
         }
+
+        /* Easter Egg Button Style */
+        #cat-flood-trigger {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #0f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 9999; /* Ensure button is on top */
+        }
+
+        #cat-flood-trigger:hover {
+            background-color: #ff0000;
+        }
+
+        #cat-flood-trigger:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body>
 
 <!-- Trigger Element for the Easter Egg -->
-<button style="margin-left:400px;" id="cat-flood-trigger">Don't Press!!!</button>
+<button id="cat-flood-trigger">Dont Press!</button>
 
 <!-- JavaScript for Cat Animation -->
 <script>
     document.getElementById('cat-flood-trigger').addEventListener('click', function() {
         const numCats = 50; // Number of cats to flood the screen
-        const container = document.querySelector('.container');
         const bodyWidth = document.body.clientWidth;
         const bodyHeight = document.body.clientHeight;
 
@@ -100,12 +135,12 @@
             cat.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Randomize animation duration
             cat.style.animationTimingFunction = 'cubic-bezier(' + Math.random() + ')'; // Random easing function
             cat.style.opacity = Math.random(); // Randomize opacity for each cat
-            
+
             // Randomize rotation direction
             const rotationDirection = Math.random() < 0.5 ? 'normal' : 'reverse'; // Randomly set clockwise or counterclockwise
             cat.style.animationDirection = rotationDirection; // Set rotation direction
-            
-            container.appendChild(cat);
+
+            document.body.appendChild(cat); // Append cats to body
         }
     });
 </script>
@@ -141,7 +176,7 @@
             <p>A Minecraft server hosted by me.</p>
         </div>
     </div>
-
+    <h1>Profiles:</h1>
     <!-- GitHub Profile Link -->
     <div class="profile-link">
         <div>
@@ -157,19 +192,16 @@
     </div>
 
     <!-- Thingiverse Profile Link -->
-    <div class="profile-link">
+<div class=project>
         <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png"
                  alt="Thingiverse Logo" class="icon">
             Thingiverse Profile
         </a>
-    </div>
+        </p>
     <p>Explore my designs on Thingiverse.</p>
 </div>
 
-<div style="position: absolute; bottom: 5px; background-color: ">
-<a href="impressum.html" target="_blank">Impressum</a>
-    </div>
-
-</body>
-</html>
+<!-- Footer -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="impressum.html" target="_blank">Impressum</a
