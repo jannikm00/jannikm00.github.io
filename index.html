@@ -1,67 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevent scrolling while cats are falling */
-        }
-        .cat {
-            position: absolute;
-            pointer-events: none; /* Prevent cats from interfering with user interaction */
-            animation: fall linear infinite; /* Apply falling animation */
-        }
-        @keyframes fall {
-            0% {
-                transform: translateY(-50px) rotate(0deg); /* Initial position and rotation */
-            }
-            100% {
-                transform: translateY(calc(100vh + 50px)) rotate(360deg); /* Final position and rotation */
-            }
-        }
-    </style>
-
-
-
-<!-- This is the trigger element for the easter egg -->
-<button style="height:10;width:10;margin-left:" id="cat-flood-trigger">Dont Press!!!</button>
-
-
-
-
-
-
-
-<script>
-    // JavaScript code to create cat images and make them fall down
-    document.getElementById('cat-flood-trigger').addEventListener('click', function() {
-        const numCats = 50; // Number of cats to flood the screen
-        const container = document.querySelector('.container');
-        const bodyWidth = document.body.clientWidth;
-        const bodyHeight = document.body.clientHeight;
-
-        for (let i = 0; i < numCats; i++) {
-            const cat = document.createElement('img');
-            cat.src = 'flocki.png'; // Replace 'cat_image_url.jpg' with the URL of your cat image
-            cat.classList.add('cat');
-            cat.style.left = Math.random() * bodyWidth + 'px'; // Random horizontal position
-            cat.style.top = Math.random() * bodyHeight + 'px'; // Random vertical position
-            cat.style.animationDuration = (Math.random() * 1 + 3) + 's'; // Randomize animation duration
-            cat.style.animationTimingFunction = 'cubic-bezier(0.68, 0.17, 0.27, 1.44)'; // Use custom easing function for realistic physics
-            cat.style.opacity = Math.random(); // Randomize opacity for each cat
-            container.appendChild(cat);
-        }
-    });
-</script>
-
-
-
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janniks Website</title>
+    <title>Jannik's Website</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -69,6 +13,7 @@
             background-color: #f8f8f8;
             color: #333;
         }
+        /* Container Styles */
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -115,60 +60,113 @@
             align-items: center;
             margin-bottom: 20px;
         }
+        /* Cat Animation Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling while cats are falling */
+        }
+        .cat {
+            position: absolute;
+            pointer-events: none; /* Prevent cats from interfering with user interaction */
+            animation: fall linear infinite; /* Apply falling animation */
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg); /* Initial position and rotation */
+            }
+            100% {
+                transform: translateY(calc(100vh + 50px)) rotate(360deg); /* Final position and rotation */
+            }
+        }
     </style>
 </head>
 <body>
 
+<!-- Trigger Element for the Easter Egg -->
+<button style="height: 30px; width: 100px; margin-left: 10px;" id="cat-flood-trigger">Don't Press!!!</button>
+
+<!-- JavaScript for Cat Animation -->
+<script>
+    document.getElementById('cat-flood-trigger').addEventListener('click', function() {
+        const numCats = 50; // Number of cats to flood the screen
+        const container = document.querySelector('.container');
+        const bodyWidth = document.body.clientWidth;
+        const bodyHeight = document.body.clientHeight;
+
+        for (let i = 0; i < numCats; i++) {
+            const cat = document.createElement('img');
+            cat.src = 'flocki.png'; // Replace 'cat_image_url.jpg' with the URL of your cat image
+            cat.classList.add('cat');
+            cat.style.left = Math.random() * bodyWidth + 'px'; // Random horizontal position
+            cat.style.top = Math.random() * bodyHeight + 'px'; // Random vertical position
+            cat.style.animationDuration = (Math.random() * 1 + 3) + 's'; // Randomize animation duration
+            cat.style.animationTimingFunction = 'cubic-bezier(0.68, 0.17, 0.27, 1.44)'; // Custom easing function for realistic physics
+            cat.style.opacity = Math.random(); // Randomize opacity for each cat
+            container.appendChild(cat);
+        }
+    });
+</script>
+
+<!-- Main Content -->
 <div class="container">
     <h1>Projects:</h1>
 
+    <!-- Bitcoin Node Project -->
     <div class="project">
-        
         <div>
-            <p><a href="https://bitnodes.io/nodes/87.142.53.231-8333/" target="_blank"><img src="https://bitcoin.design/assets/images/guide/getting-started/visual-language/bitboy-2011@2x.png"
-             alt="Bitcoin Logo"
-             class="icon">Bitcoin Node</a></p>
+            <p>
+                <a href="https://bitnodes.io/nodes/87.142.53.231-8333/" target="_blank">
+                    <img src="https://bitcoin.design/assets/images/guide/getting-started/visual-language/bitboy-2011@2x.png"
+                         alt="Bitcoin Logo" class="icon">
+                    Bitcoin Node
+                </a>
+            </p>
             <p>A Bitcoin node hosted by me.</p>
-            
         </div>
-     <!--</a><img id='barcode' 
-            src="https://api.qrserver.com/v1/create-qr-code/?data=bitcoin:bc1qf73v3g3d9500xnxxwmam5ap2umxfdcnu0ywpf4&amp;size=100x100" 
-            alt="" 
-            width="100" 
-            height="100"style="margin-left: 400px;"/> -->
     </div>
 
+    <!-- Minecraft Server Project -->
     <div class="project">
-
         <div>
-            <p><a href="https://api.mcsrvstat.us/simple/jannikrpi.ddns.net" target="_blank">        <img src="https://api.mcsrvstat.us/icon/jannikrpi.ddns.net"
-             alt="Minecraft Server Icon"
-             class="icon">jannikrpi.ddns.net:25565</a></p>
+            <p>
+                <a href="https://api.mcsrvstat.us/simple/jannikrpi.ddns.net" target="_blank">
+                    <img src="https://api.mcsrvstat.us/icon/jannikrpi.ddns.net"
+                         alt="Minecraft Server Icon" class="icon">
+                    jannikrpi.ddns.net:25565
+                </a>
             </p>
             <p>A Minecraft server hosted by me.</p>
         </div>
     </div>
 
+    <!-- GitHub Profile Link -->
     <div class="profile-link">
-
-       <p><a href="https://github.com/jannikm00/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-             alt="GitHub Logo" class="icon">GitHub Profile</a></P>   
+        <p>
+            <a href="https://github.com/jannikm00/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                     alt="GitHub Logo" class="icon">
+                GitHub Profile
+            </a>
+        </p>
+        <p>Check out my GitHub profile.</p>
     </div>
-    <p>Check out my GitHub profile.</p>
 
+    <!-- Thingiverse Profile Link -->
     <div class="profile-link">
-
-        <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank">        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png"
-             alt="Thingiverse Logo" class="icon">Thingiverse Profile</a>
+        <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png"
+                 alt="Thingiverse Logo" class="icon">
+            Thingiverse Profile
+        </a>
     </div>
     <p>Explore my designs on Thingiverse.</p>
 </div>
 
-
-    <div style="position: absolute; bottom: 5px; background-color: ">
-<a href="impressum.html" target="_blank">impressum</a>
-    </div>
+<!-- Footer -->
+<div style="position: absolute; bottom: 5px;">
+    <a href="impressum.html" target="_blank">Impressum</a>
 </div>
 
-
+</body>
 </html>
