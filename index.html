@@ -75,7 +75,7 @@
 
         /* Cat Animation Styles */
         .cat {
-            position: absolute;
+            position: fixed;
             pointer-events: none; /* Prevent cats from interfering with user interaction */
             animation: fall linear infinite; /* Apply falling animation */
         }
@@ -130,11 +130,11 @@
             const cat = document.createElement('img');
             cat.src = 'flocki.png'; // Replace 'cat_image_url.jpg' with the URL of your cat image
             cat.classList.add('cat');
-            cat.style.left = Math.random() * bodyWidth + 'px'; // Random horizontal position
-            cat.style.top = -50 + Math.random() * bodyHeight + 'px'; // Random vertical position with initial offset
+            cat.style.left = Math.random(2) * bodyWidth + 'px'; // Random horizontal position
+            cat.style.top = -50 + Math.random(3) * bodyHeight + 'px'; // Random vertical position with initial offset
             cat.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Randomize animation duration
             cat.style.animationTimingFunction = 'cubic-bezier(' + Math.random() + ')'; // Random easing function
-            cat.style.opacity = Math.random(); // Randomize opacity for each cat
+            cat.style.opacity = 0.5+Math.random(); // Randomize opacity for each cat
 
             // Randomize rotation direction
             const rotationDirection = Math.random() < 0.5 ? 'normal' : 'reverse'; // Randomly set clockwise or counterclockwise
