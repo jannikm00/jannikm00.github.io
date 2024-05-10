@@ -21,7 +21,7 @@
 </style>
 </head>
 <body>
-<canvas id="gameCanvas" width="800" height="600"></canvas>
+<canvas id="gameCanvas" width="400" height="600"></canvas>
 <script>
     // Game variables
     var canvas = document.getElementById("gameCanvas");
@@ -41,43 +41,55 @@
     var score = 0;
     var gameInterval;
 
- // Event listeners
-canvas.addEventListener("touchstart", handleTouchStart);
-canvas.addEventListener("touchmove", handleTouchMove);
-canvas.addEventListener("touchend", handleTouchEnd);
+    // Variables for touch control
+    var touchStartX = null;
+    var touchStartY = null;
+    var touchEndX = null;
+    var touchEndY = null;
 
-var touchStartX = 0;
-var touchMoveX = 0;
+    // Event listeners
+    canvas.addEventListener("touchstart", handleTouchStart);
+    canvas.addEventListener("touchmove", handleTouchMove);
+    canvas.addEventListener("touchend", handleTouchEnd);
 
-function handleTouchStart(event) {
-    touchStartX = event.touches[0].clientX;
-    event.preventDefault();
-}
-
-function handleTouchMove(event) {
-    touchMoveX = event.touches[0].clientX;
-    event.preventDefault();
-}
-
-function handleTouchEnd(event) {
-    var swipeDistance = touchMoveX - touchStartX;
-    if (swipeDistance > 0 && player.x < canvas.width - player.width) {
-        player.x += 10;
-    } else if (swipeDistance < 0 && player.x > 0) {
-        player.x -= 10;
+    function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+        event.preventDefault();
     }
-    touchStartX = 0;
-    touchMoveX = 0;
-    event.preventDefault();
-}
 
-canvas.addEventListener("touchstart", handleTouchStartShooting);
+    function handleTouchMove(event) {
+        touchEndX = event.touches[0].clientX;
+        touchEndY = event.touches[0].clientY;
+        event.preventDefault();
+    }
 
-function handleTouchStartShooting(event) {
-    fireBullet();
-    event.preventDefault();
-}
+    function handleTouchEnd(event) {
+        event.preventDefault();
+        var dx = touchEndX - touchStartX;
+        var dy = touchEndY - touchStartY;
 
+        // Determine whether the touch was a swipe or tap
+        if (Math.abs(dx) > Math.abs(dy)) {
+            // Swipe detected
+            if (dx > 0 && player.x < canvas.width - player.width) {
+                // Swipe right
+                player.x += 10;
+            } else if (dx < 0 && player.x > 0) {
+                // Swipe left
+                player.x -= 10;
+            }
+        } else {
+            // Tap detected (shoot)
+            fireBullet();
+        }
+
+        // Reset touch variables
+        touchStartX = null;
+        touchStartY = null;
+        touchEndX = null;
+        touchEndY = null;
+    }
 
     // Function to create a new bullet
     function fireBullet() {
