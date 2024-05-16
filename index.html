@@ -18,7 +18,7 @@
         .container {
             max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 25px;
             background-color: #fff;
             border-radius: 28px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -48,7 +48,7 @@
 
         .icon {
             width: 50px;
-            height: auto;
+            height: 50px;
             vertical-align: middle;
             margin-right: 10px;
         }
@@ -56,17 +56,18 @@
         .profile-link {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .profile-link img {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             margin-right: 10px;
             border-radius: 50%;
         }
 
-        .project, .profile-link {
+        .project,
+        .profile-link {
             border-bottom: 1px solid #ddd;
             padding-bottom: 15px;
             margin-bottom: 15px;
@@ -103,9 +104,10 @@
             font-size: 16px;
             z-index: 9999; /* Ensure button is on top */
         }
-.second-link {
-    margin-left: 20px; /* Adjust the value as needed */
-}
+
+        .second-link {
+            margin-left: 20px;
+        }
 
         #cat-flood-trigger:hover {
             background-color: #ff0000;
@@ -165,28 +167,26 @@
         </div>
     </div>
 
-<!-- Minecraft Server Project -->
-<div class="project">
-    <div>
-        <p>
-            <div class="link-container">
-                <a href="https://mcsrvstat.us/server/jannikrpi.ddns.net" target="_blank">
-                    <img src="https://api.mcsrvstat.us/icon/jannikrpi.ddns.net"
-                         alt="Minecraft Server Icon" class="icon">
-                    jannikrpi.ddns.net:25565
-                </a>
-                <!-- Second Link -->
-                <a href="jannikrpi.ddns.net:8100" target="_blank" class="second-link">
-                    3d Map
-                </a>
-            </div>
-        </p>
-        <p>A Minecraft server hosted by me.</p>
+    <!-- Minecraft Server Project -->
+    <div class="project">
+        <div>
+            <p>
+                <div class="link-container">
+                    <a href="https://mcsrvstat.us/server/jannikrpi.ddns.net" target="_blank">
+                        <img src="https://api.mcsrvstat.us/icon/jannikrpi.ddns.net"
+                             alt="Minecraft Server Icon" class="icon">
+                        jannikrpi.ddns.net:25565
+                    </a>
+                    <!-- Second Link -->
+                    <a href="http://jannikrpi.ddns.net:8100/" target="_blank" class="second-link">
+                        3d Map
+                    </a>
+                </div>
+            </p>
+            <p>A Minecraft server hosted by me.</p>
+        </div>
     </div>
 
-
-
-    </div>
     <h1>Profiles:</h1>
     <!-- GitHub Profile Link -->
     <div class="profile-link">
@@ -203,15 +203,22 @@
     </div>
 
     <!-- Thingiverse Profile Link -->
-        <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png"
+    <div> 
+          <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png"
                  alt="Thingiverse Logo" class="icon">
             Thingiverse Profile
         </a>
-        </p>
-    <p>Explore my designs on Thingiverse.</p>
+        <p></p>
+            <p>Explore my designs on Thingiverse.</p>
 
+    </div>
+
+</div>
 
 <!-- Footer -->
 <div style="text-align: center; margin-top: 20px;">
-    <a href="impressum.html">Impressum</a
+    <a href="impressum.html">Impressum</a>
+</div>
+</body>
+</html>
