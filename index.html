@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jannik's Website</title>
+     <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 28px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        a {
+            color: #007fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .profile-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-link img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .project,
+        .profile-link {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Cat Animation Styles */
+        .cat {
+            position: fixed;
+            pointer-events: none; /* Prevent cats from interfering with user interaction */
+            animation: fall linear infinite; /* Apply falling animation */
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg); /* Initial position and rotation */
+            }
+            100% {
+                transform: translateY(calc(100vh + 50px)) rotate(360deg); /* Final position and rotation */
+            }
+        }
+
+        /* Easter Egg Button Style */
+        #cat-flood-trigger {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #cccccc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 9999; /* Ensure button is on top */
+        }
+
+        .second-link {
+            margin-left: 10px;
+        }
+
+        #cat-flood-trigger:hover {
+            background-color: #ff0000;
+        }
+
+        #cat-flood-trigger:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Trigger Element for the Easter Egg -->
+<button id="cat-flood-trigger">Dont Press!</button>
+
+<!-- JavaScript for Cat Animation -->
+<script>
+    document.getElementById('cat-flood-trigger').addEventListener('click', function() {
+        const numCats = 70; // Number of cats to flood the screen
+        const bodyWidth = document.body.clientWidth;
+        const bodyHeight = document.body.clientHeight;
+
+        for (let i = 0; i < numCats; i++) {
+            const cat = document.createElement('img');
+            cat.src = 'flocki.png'; // Replace 'cat_image_url.jpg' with the URL of your cat image
+            cat.classList.add('cat');
+            cat.style.left = Math.random(2) * bodyWidth + 'px'; // Random horizontal position
+            cat.style.top = -50 + Math.random(3) * bodyHeight + 'px'; // Random vertical position with initial offset
+            cat.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Randomize animation duration
+            cat.style.animationTimingFunction = 'cubic-bezier(' + Math.random() + ')'; // Random easing function
+            cat.style.opacity = 0.5+Math.random(); // Randomize opacity for each cat
+
+            // Randomize rotation direction
+            const rotationDirection = Math.random() < 0.5 ? 'normal' : 'reverse'; // Randomly set clockwise or counterclockwise
+            cat.style.animationDirection = rotationDirection; // Set rotation direction
+
+            document.body.appendChild(cat); // Append cats to body
+        }
+    });
+</script>
+
+<!-- Main Content -->
+<div class="container">
+    <h1>Projects:</h1>
+    
+    
+
+    <!-- Bitcoin Node Project -->
+    <div class="project">
+        <div>
+            <p>
+                <a href="https://bitnodes.io/nodes/87.142.55.78-8333/" target="_blank">
+                    <img src="https://bitcoin.design/assets/images/guide/getting-started/visual-language/bitboy-2011@2x.png"
+                         alt="Bitcoin Logo" class="icon">
+                    Bitcoin Node                    <!-- Second Link
+                    <a href="https://tmate.io/t/ro-bKwKrn7CujYYLmCvr3gz2qAzX" target="_blank" class="second-link">
+                        Terminal
+                    </a>  -->
+                </a>
+            </p>
+            <p>A Bitcoin Full node run by me.</p>
+        <!-- FAVORITEN    
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+    <a href="./favorites/favorites.html">Favorites (not complete!)</a>-->
+</div>
+    </div>
+
+    <!-- Minecraft Server Project 
+    <div class="project">
+        <div>
+            <p>
+                <div class="link-container">
+                    <a href="https://mcsrvstat.us/server/jannikrpi.ddns.net" target="_blank">
+                        <img src="https://api.mcsrvstat.us/icon/jannikrpi.ddns.net"
+                             alt="Minecraft Server Icon" class="icon">
+                        jannikrpi.ddns.net:25565
+                    </a>
+
+                    <a href="http://jannikrpi.ddns.net:8100/" target="_blank" class="second-link">
+                        3d Map
+                    </a>
+                </div>
+            </p>
+            <p>A Minecraft server hosted by me.</p>
+        </div>
+    </div> -->
+
+    <h1>Profiles:</h1>
+    <!-- GitHub Profile Link -->
+    <div class="profile-link">
+        <div>
+            <p>
+                <a href="https://github.com/jannikm00/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                         alt="GitHub Logo" class="icon">
+                    GitHub Profile
+                </a>
+            </p>
+            <p>Checkout my GitHub profile.</p>
+        </div>
+    </div>
+
+    <!-- Thingiverse Profile Link -->
+    <div> 
+          <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png"
+                 alt="Thingiverse Logo" class="icon">
+            Thingiverse Profile
+        </a>
+        <p></p>
+            <p>Explore my designs on Thingiverse.</p>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div style="text-align: center; margin-top: 20px;">
+    <a href="impressum.html">Imprint</a>
+</div>
+</body>
+</html>
