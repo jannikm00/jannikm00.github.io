@@ -72,25 +72,6 @@
             }
         }
 
-        /* Money rain CSS */
-        .money {
-            position: absolute;
-            width: 100px;
-            height: 50px;
-            background-image: url('https://i.pinimg.com/originals/21/ec/23/21ec237b9aaba02a22ca13f94dd54866.png');
-            background-size: cover;
-            animation: fall linear infinite;
-            z-index: 1;
-            overflow: hidden;
-        }
-        @keyframes fall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
     </style>
 </head>
 <body>
@@ -127,20 +108,5 @@
             <span>Cosmos:</span><br> <span class="payment-value">cosmos14du8z956art8aysdv8nd0yuuk74aa6qcedfw5z</span>
         </div>
     </div>
-
-    <script>
-        function createMoney() {
-            const money = document.createElement('div');
-            money.classList.add('money');
-            money.style.left = Math.random() * 100 + 'vw';
-            money.style.animationDuration = Math.random() * 2 + 3 + 's'; 
-            document.body.appendChild(money);
-            setTimeout(() => {
-                money.remove();
-            }, 5000); 
-        }
-
-        setInterval(createMoney, 100);
-    </script>
 </body>
 </html>
