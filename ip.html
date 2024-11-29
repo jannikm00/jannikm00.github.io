@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #ipResult {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="ipResult">Loading IP address...</div>
+
+  <script>
+    async function fetchIPAddress() {
+      const domain = "jannikrpi1.ddns.net";
+      const resultDiv = document.getElementById('ipResult');
+
+      try {
+        // Use Google's DNS-over-HTTPS API to resolve the domain
+        const response = await fetch(`https://dns.google/resolve?name=${domain}`);
+        const data = await response.json();
+
+        if (data.Status === 0 && data.Answer) {
+          const ipAddress = data.Answer.find(record => record.type === 1)?.data; // Type 1 is A record (IPv4)
+          if (ipAddress) {
+            resultDiv.innerText = `IP Address: ${ipAddress}`;
+          } else {
+            resultDiv.innerText = 'Error: No A record found.';
+          }
+        } else {
+          resultDiv.innerText = 'Error: Unable to fetch IP address.';
+        }
+      } catch (error) {
+        resultDiv.innerText = `Error: ${error.message}`;
+      }
+    }
+
+    // Call the function when the page loads
+    window.onload = fetchIPAddress;
+  </script>
+</body>
+</html>
