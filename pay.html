@@ -4,107 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Information</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
 
-        /* Container Styles */
-        .container {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 25px;
-            background-color: #fff;
-            border-radius: 28px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-        h1 {
-            text-align: center;
-            color: #000;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .no-underline {
-            text-decoration: none;
-        }
-        .payment-method {
-            margin: 15px 0;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .payment-method:last-child {
-            border-bottom: none;
-        }
-        .payment-method span {
-            font-weight: bold;
-            color: #333;
-        }
-        .payment-value {
-            color: #555;
-            white-space: nowrap;
-            font-size: 0.9em;
-        }
-        .payment-link {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .payment-link:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 600px) {
-            .payment-value, .payment-link {
-                font-size: 0.8em;
-            }
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <a href="https://jannikm00.github.io" class="no-underline"><h1>Jannik Meiers</h1></a>
-        <div class="payment-method">
-            <span>PayPal:</span><br> <a href="https://www.paypal.com/qrcodes/p2pqrc/7QG5FFM3X265E" class="payment-link">jannikm5@proton.me</a>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; color: #333;">
+
+    <div style="max-width: 500px; margin: 20px auto; padding: 25px; background-color: #fff; border-radius: 28px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);">
+
+        <a href="https://jannikm00.github.io" style="text-decoration: none;">
+            <h1 style="text-align: center; color: #000; font-size: 2em; margin-bottom: 20px;">Jannik Meiers</h1>
+        </a>
+
+        <!-- Payment item template -->
+        
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fab fa-paypal" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">PayPal:</span><br>
+                <a href="https://www.paypal.com/qrcodes/p2pqrc/7QG5FFM3X265E"
+                   style="color:#007bff; text-decoration:none; font-size:0.9em; word-break:break-all; overflow-wrap:anywhere;">
+                   jannikm5@proton.me
+                </a>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Binance-Pay:</span><br> <a href="https://www.binance.com/en/my/wallet/account/payment/send" class="payment-link">836619211</a>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fas fa-coins" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Binance-Pay:</span><br>
+                <a href="https://www.binance.com/en/my/wallet/account/payment/send"
+                   style="color:#007bff; text-decoration:none; font-size:0.9em; word-break:break-all; overflow-wrap:anywhere;">
+                   836619211
+                </a>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Revolut: (pay with card)</span><br> <a href="https://revolut.me/jannikdl15" class="payment-link">jannikdl15</a>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fas fa-credit-card" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Revolut:</span><br>
+                <a href="https://revolut.me/jannikdl15"
+                   style="color:#007bff; text-decoration:none; font-size:0.9em; word-break:break-all; overflow-wrap:anywhere;">
+                   jannikdl15
+                </a>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Bitcoin-Mainnet:</span><br> <a href="bitcoin:bc1qcm2htjgyragpgz92pgd0w98xmrx2jm4d2n3vrd" class="payment-link">bc1qcm2htjgyragpgz92pgd0w98xmrx2jm4d2n3vrd</a>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fab fa-bitcoin" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Bitcoin:</span><br>
+                <a href="bitcoin:bc1qcm2htjgyragpgz92pgd0w98xmrx2jm4d2n3vrd"
+                   style="color:#007bff; text-decoration:none; font-size:0.9em; word-break:break-all; overflow-wrap:anywhere;">
+                   bc1qcm2htjgyragpgz92pgd0w98xmrx2jm4d2n3vrd
+                </a>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Binance Smart Chain:</span><br> <span class="payment-value">0x0cbb5894135fb1208357ce30201524f989f85344</span>
+
+        <!-- Non-link addresses -->
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fas fa-link" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Binance Smart Chain:</span><br>
+                <span style="font-size:0.9em; color:#555; word-break:break-all; overflow-wrap:anywhere;">
+                    0x0cbb5894135fb1208357ce30201524f989f85344
+                </span>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Dogecoin:</span><br> <span class="payment-value">DE1MpmztysxYmTV2D67S8Eb3UwSSSvTnnM</span>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fas fa-dog" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Dogecoin:</span><br>
+                <span style="font-size:0.9em; color:#555; word-break:break-all; overflow-wrap:anywhere;">
+                    DE1MpmztysxYmTV2D67S8Eb3UwSSSvTnnM
+                </span>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Ethereum:</span><br> <span class="payment-value">0x46EfBBc9715bBF4946a63B29ff051e4a0391Fb9C</span>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fab fa-ethereum" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Ethereum:</span><br>
+                <span style="font-size:0.9em; color:#555; word-break:break-all; overflow-wrap:anywhere;">
+                    0x46EfBBc9715bBF4946a63B29ff051e4a0391Fb9C
+                </span>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Solana:</span><br> <span class="payment-value">Eh2x8fAQ2nTigDu6dEzpFNes3TQbS4Uv4D9Qv6pd4bUF</span>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fas fa-bolt" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Solana:</span><br>
+                <span style="font-size:0.9em; color:#555; word-break:break-all; overflow-wrap:anywhere;">
+                    Eh2x8fAQ2nTigDu6dEzpFNes3TQbS4Uv4D9Qv6pd4bUF
+                </span>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Tron:</span><br> <span class="payment-value">TQEQLdQ6CeSLPeeWSoS5kRP6wiSwUn3EPB</span>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px; border-bottom:1px solid #ddd;">
+            <i class="fas fa-network-wired" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Tron:</span><br>
+                <span style="font-size:0.9em; color:#555; word-break:break-all; overflow-wrap:anywhere;">
+                    TQEQLdQ6CeSLPeeWSoS5kRP6wiSwUn3EPB
+                </span>
+            </div>
         </div>
-        <div class="payment-method">
-            <span>Cosmos:</span><br> <span class="payment-value">cosmos14du8z956art8aysdv8nd0yuuk74aa6qcedfw5z</span>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:15px 0; padding:10px;">
+            <i class="fas fa-atom" style="font-size:22px; width:30px; text-align:center;"></i>
+            <div>
+                <span style="font-weight:bold;">Cosmos:</span><br>
+                <span style="font-size:0.9em; color:#555; word-break:break-all; overflow-wrap:anywhere;">
+                    cosmos14du8z956art8aysdv8nd0yuuk74aa6qcedfw5z
+                </span>
+            </div>
         </div>
+
     </div>
+
 </body>
 </html>
