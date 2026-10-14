@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jannik — Portfolio & Projects</title>
+    <title>Jannik — Portfolio</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="logo.png">
     <!-- Google Fonts: Plus Jakarta Sans -->
@@ -111,6 +111,17 @@
             width: 100%;
             height: 100%;
         }
+
+        /* Smooth Arrow Rotation für das Details-Element */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg.chevron {
+            transform: rotate(180deg);
+        }
+        summary {
+            list-style: none;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased relative overflow-x-hidden selection:bg-indigo-500 selection:text-white">
@@ -169,7 +180,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Willkommen auf meiner Seite
                 </div>
                 <h1 class="text-2xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-                    Hi, ich bin Jannik. <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-amber-400">Elektroniker für Betriebstechnik</span> und spiele bei Langeweile am Laptop.
+                    Hi, ich bin Jannik. <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-amber-400">Elektroniker für Betriebstechnik</span> und spiele manchmal am Laptop.
                 </h1>
                 <p class="text-slate-300 text-sm sm:text-lg leading-relaxed mb-2">
                     Hier findest du meine Apps, GitHub-Repositories, 3D-Druck Designs und Profile.
@@ -177,117 +188,130 @@
             </div>
         </section>
 
-        <!-- STEMPELHELD FEATURED SHOWCASE SECTION -->
-        <section id="stempelheld-section" class="glass-panel rounded-3xl p-5 sm:p-10 relative overflow-hidden glow-effect border-amber-500/20">
-            <!-- Header Tag -->
-            <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[11px] sm:text-xs font-bold uppercase tracking-wider">
-                    <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                    Android App Showcase
-                </div>
-                <span class="text-[11px] sm:text-xs font-mono text-slate-400 bg-slate-900/60 px-3 py-1 rounded-lg border border-slate-800">Designed for Android, IOS sucks!</span>
-            </div>
-
-            <!-- Title & Subtitle -->
-            <div class="mb-8">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 shrink-0">
-                        <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-xl sm:text-2xl">
-                            ⏱️
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Stempelheld</h2>
-                        <p class="text-amber-300 font-medium text-xs sm:text-base">Eine kleine Android-App, die dabei hilft, das rechtzeitige Ausstempeln nicht zu vergessen.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Story & Context Card -->
-            <div class="glass-card rounded-2xl p-5 sm:p-6 mb-8 border-l-4 border-l-amber-500">
-                <h3 class="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2">Hintergrund & Geschichte</h3>
-                <p class="text-slate-300 text-xs sm:text-base leading-relaxed">
-                    Ich hatte immer wieder das Problem, meine Arbeitszeit nicht rechtzeitig zu beenden oder schlicht zu vergessen, auszustempeln. Diese App wurde entwickelt, um genau dabei zu helfen.
-                </p>
-            </div>
-
-            <!-- "So funktioniert's" Step-by-Step Grid -->
-            <div class="mb-10">
-                <h3 class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 mb-4 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    So funktioniert's
-                </h3>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- Step 1 -->
-                    <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
-                        <div class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-bold text-sm mb-3 border border-indigo-500/30">1</div>
-                        <h4 class="font-bold text-white text-sm mb-1">Einstempeln</h4>
-                        <p class="text-xs text-slate-300 leading-relaxed">Einstempelzeit eingeben</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
-                        <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold text-sm mb-3 border border-purple-500/30">2</div>
-                        <h4 class="font-bold text-white text-sm mb-1">Automatische Berechnung</h4>
-                        <p class="text-xs text-slate-300 leading-relaxed">Die App berechnet automatisch die entsprechende Ausstempelzeit.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
-                        <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold text-sm mb-3 border border-amber-500/30">3</div>
-                        <h4 class="font-bold text-white text-sm mb-1">Erinnerung erhalten</h4>
-                        <p class="text-xs text-slate-300 leading-relaxed">15 Minuten vorher erhältst du eine Benachrichtigung.</p>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
-                        <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-sm mb-3 border border-emerald-500/30">4</div>
-                        <h4 class="font-bold text-white text-sm mb-1">Pünktlich Feierabend</h4>
-                        <p class="text-xs text-slate-300 leading-relaxed">So bleibt genügend Zeit, um rechtzeitig auszustempeln.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Screenshots Gallery -->
-            <div>
-                <h3 class="text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    App Screenshot
-                </h3>
-
-                <!-- Single Framed Screenshot Container / Drop Slot -->
-                <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center border-2 border-dashed border-slate-700/80 hover:border-amber-500/50 transition-colors">
-                    <div class="max-w-[240px] sm:max-w-xs w-full aspect-[9/19] rounded-3xl bg-slate-900 border-4 border-slate-800 shadow-2xl overflow-hidden relative group flex flex-col items-center justify-center">
-                        <img
-                            src="stempelheld-screenshot.png"
-                            alt="Stempelheld App Screenshot"
-                            class="w-full h-full object-cover rounded-2xl"
-                            onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('screenshot-placeholder').classList.remove('hidden');"
-                        >
-
-                        <!-- Fallback / Empty Slot Visual -->
-                        <div id="screenshot-placeholder" class="hidden absolute inset-0 p-6 flex flex-col items-center justify-center text-center space-y-3 bg-slate-900/90">
-                            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <!-- STEMPELHELD FEATURED SHOWCASE SECTION (ALS AUSKLAPPBARER BEREICH) -->
+        <section id="stempelheld-section" class="glass-panel rounded-3xl relative overflow-hidden glow-effect border-amber-500/20">
+            <details class="group">
+                <!-- Der klickbare Header (Summary) -->
+                <summary class="p-5 sm:p-8 cursor-pointer select-none flex items-center justify-between gap-4 hover:bg-slate-900/40 transition-colors">
+                    <div class="flex items-center gap-4 min-w-0">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 shrink-0">
+                            <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-xl sm:text-2xl">
+                                ⏱️
                             </div>
-                            <span class="text-xs font-bold text-white">Screenshot Platzhalter</span>
-                            <p class="text-[11px] text-slate-400 leading-relaxed font-mono">
-                                Füge dein Bild als <br><code class="text-amber-300">stempelheld-screenshot.png</code><br> im selben Ordner ein.
-                            </p>
+                        </div>
+                        <div class="min-w-0">
+                            <div class="flex items-center gap-2 flex-wrap mb-1">
+                                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                                    Android App Showcase
+                                </span>
+                                <span class="text-[10px] sm:text-xs font-mono text-slate-400 bg-slate-900/60 px-2 py-0.5 rounded border border-slate-800 hidden sm:inline-block">Designed for Android, IOS sucks!</span>
+                            </div>
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight truncate">Stempelheld</h2>
+                            <p class="text-amber-300/90 text-xs sm:text-sm truncate">Eine kleine Android-App gegen das Vergessen des Ausstempelns.</p>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-400 mt-4 font-medium text-center">Stempelheld Benutzeroberfläche</span>
-                </div>
-            </div>
 
-            <!-- GitHub Download Link Button Centered -->
-            <div class="mt-8 pt-6 border-t border-slate-800/80 flex justify-center">
-                <a href="https://github.com/jannikm00/Stempelheld/releases" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-indigo-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-amber-500/20 hover:scale-[1.02] active:scale-95 transition-all">
-                    <span>Zum Download</span>
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-            </div>
+                    <!-- Aufklapp-Pfeil -->
+                    <div class="flex items-center gap-2 shrink-0 bg-slate-900/80 border border-slate-800 px-3 py-2 rounded-xl text-xs font-medium text-slate-300 group-hover:border-amber-500/30 transition-all">
+<!--                        <span class="hidden xs:inline group-open:hidden">Anzeigen</span>
+                        <span class="hidden xs:inline hidden group-open:inline">Schließen</span>-->
+                        <svg class="chevron w-4 h-4 text-amber-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                </summary>
+
+                <!-- Der ausklappbare Inhalt -->
+                <div class="p-5 sm:p-10 pt-0 sm:pt-0 border-t border-slate-800/60 mt-2 space-y-8">
+
+                    <!-- Story & Context Card -->
+                    <div class="glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 mt-6">
+                        <h3 class="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2">Hintergrund & Geschichte</h3>
+                        <p class="text-slate-300 text-xs sm:text-base leading-relaxed">
+                            Ich hatte immer wieder das Problem, meine Arbeitszeit nicht rechtzeitig zu beenden oder schlicht zu vergessen, auszustempeln. Diese App wurde entwickelt, um genau dabei zu helfen.
+                        </p>
+                    </div>
+
+                    <!-- "So funktioniert's" Step-by-Step Grid -->
+                    <div>
+                        <h3 class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            So funktioniert's
+                        </h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Step 1 -->
+                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                                <div class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-bold text-sm mb-3 border border-indigo-500/30">1</div>
+                                <h4 class="font-bold text-white text-sm mb-1">Einstempeln</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Einstempelzeit eingeben</p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                                <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold text-sm mb-3 border border-purple-500/30">2</div>
+                                <h4 class="font-bold text-white text-sm mb-1">Automatische Berechnung</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Die App berechnet automatisch die entsprechende Ausstempelzeit.</p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                                <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold text-sm mb-3 border border-amber-500/30">3</div>
+                                <h4 class="font-bold text-white text-sm mb-1">Erinnerung erhalten</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">15 Minuten vorher erhältst du eine Benachrichtigung.</p>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                                <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-sm mb-3 border border-emerald-500/30">4</div>
+                                <h4 class="font-bold text-white text-sm mb-1">Pünktlich Feierabend</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">So bleibt genügend Zeit, um rechtzeitig auszustempeln.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshots Gallery -->
+                    <div>
+                        <h3 class="text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            App Screenshot
+                        </h3>
+
+                        <!-- Single Framed Screenshot Container / Drop Slot -->
+                        <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center border-2 border-dashed border-slate-700/80 hover:border-amber-500/50 transition-colors">
+                            <div class="max-w-[240px] sm:max-w-xs w-full aspect-[9/19] rounded-3xl bg-slate-900 border-4 border-slate-800 shadow-2xl overflow-hidden relative group flex flex-col items-center justify-center">
+                                <img
+                                    src="stempelheld-screenshot.png"
+                                    alt="Stempelheld App Screenshot"
+                                    class="w-full h-full object-cover rounded-2xl"
+                                    onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('screenshot-placeholder').classList.remove('hidden');"
+                                >
+
+                                <!-- Fallback / Empty Slot Visual -->
+                                <div id="screenshot-placeholder" class="hidden absolute inset-0 p-6 flex flex-col items-center justify-center text-center space-y-3 bg-slate-900/90">
+                                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    </div>
+                                    <span class="text-xs font-bold text-white">Screenshot Platzhalter</span>
+                                    <p class="text-[11px] text-slate-400 leading-relaxed font-mono">
+                                        Füge dein Bild als <br><code class="text-amber-300">stempelheld-screenshot.png</code><br> im selben Ordner ein.
+                                    </p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-slate-400 mt-4 font-medium text-center">Stempelheld Benutzeroberfläche</span>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Download Link Button Centered -->
+                    <div class="pt-6 border-t border-slate-800/80 flex justify-center">
+                        <a href="https://github.com/jannikm00/Stempelheld/releases" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-indigo-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-amber-500/20 hover:scale-[1.02] active:scale-95 transition-all">
+                            <span>Zum Download</span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+
+                </div>
+            </details>
         </section>
 
         <!-- Spotify Favorite Track Section -->
