@@ -138,14 +138,18 @@
 
     <!-- Header Navigation -->
     <header class="max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-4 flex items-center justify-between relative z-10">
+        <!-- Logo / Name Badge Links -->
         <div class="flex items-center space-x-3">
-
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 p-0.5 shadow-lg shadow-indigo-500/20 flex items-center justify-center">
+                <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-extrabold text-indigo-400 text-sm tracking-wider">
+                    J
+                </div>
             </div>
             <div>
                 <h2 class="font-bold text-base sm:text-lg tracking-tight text-white flex items-center gap-2">
                     Jannik <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 </h2>
-                <p class="text-[11px] sm:text-xs text-slate-400">Elektroniker und Amateur Programmierer</p>
+                <p class="text-[11px] sm:text-xs text-slate-400">Elektroniker & Amateur Programmierer</p>
             </div>
         </div>
 
@@ -177,7 +181,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Willkommen auf meiner Seite
                 </div>
                 <h1 class="text-2xl xs:text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-                    Hi, ich bin Jannik. <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-amber-400">Elektroniker für Betriebstechnik</span> und spiele manchmal am Laptop.
+                    Hi, ich bin Jannik. <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-amber-400">Elektroniker</span>
                 </h1>
                 <p class="text-slate-300 text-sm sm:text-lg leading-relaxed mb-2">
                     Hier findest du meine Apps, GitHub-Repositories, 3D-Druck Designs und Profile.
@@ -196,28 +200,24 @@
                                 ⏱️
                             </div>
                         </div>
-<div class="min-w-0">
-    <div class="flex items-center gap-2 flex-wrap mb-1">
-        <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-            Android App Showcase
-        </span>
-        <!-- Bleibt auf jedem Gerät sichtbar, passt sich aber responsiv an -->
-        <span class="text-[9px] xs:text-[10px] sm:text-xs font-mono text-slate-400 bg-slate-900/60 px-2 py-0.5 rounded border border-slate-800">Designed for Android, IOS sucks!</span>
-    </div>
-    <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight truncate">Stempelheld</h2>
+                        <div class="min-w-0">
+                            <div class="flex items-center gap-2 flex-wrap mb-1">
+                                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                                    Android App Showcase
+                                </span>
+                                <span class="text-[9px] xs:text-[10px] sm:text-xs font-mono text-slate-400 bg-slate-900/60 px-2 py-0.5 rounded border border-slate-800">Designed for Android, IOS sucks!</span>
+                            </div>
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight truncate">Stempelheld</h2>
 
-    <!-- Auf Handys kürzer und bricht sauber um statt abgeschnitten zu werden -->
-    <p class="text-amber-300/90 text-xs sm:text-sm leading-snug mt-0.5">
-        <span class="sm:hidden">App gegen das Vergessen des Ausstempelns.</span>
-        <span class="hidden sm:inline">Eine kleine Android-App gegen das Vergessen des Ausstempelns.</span>
-    </p>
-</div>          </div>
+                            <p class="text-amber-300/90 text-xs sm:text-sm leading-snug mt-0.5">
+                                <span class="sm:hidden">App gegen das Vergessen des Ausstempelns.</span>
+                                <span class="hidden sm:inline">Eine kleine Android-App gegen das Vergessen des Ausstempelns.</span>
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Aufklapp-Pfeil -->
                     <div class="flex items-center gap-2 shrink-0 bg-slate-900/80 border border-slate-800 px-3 py-2 rounded-xl text-xs font-medium text-slate-300 group-hover:border-amber-500/30 transition-all">
-<!--                        <span class="hidden xs:inline group-open:hidden">Anzeigen</span>
-                        <span class="hidden xs:inline hidden group-open:inline">Schließen</span>-->
                         <svg class="chevron w-4 h-4 text-amber-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
@@ -531,7 +531,7 @@
                 // Auto-cleanup DOM after animation finishes
                 setTimeout(() => {
                     cat.remove();
-                }, 4500);
+                }, 4000);
             }
         });
     </script>
