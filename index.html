@@ -137,34 +137,34 @@
     <div class="fixed top-[45%] right-[10%] w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-amber-600/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
     <!-- Header Navigation -->
-    <header class="max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-4 flex items-center justify-between relative z-10">
+    <header class="max-w-5xl mx-auto px-3 sm:px-6 pt-5 sm:pt-8 pb-4 flex items-center justify-between relative z-10 gap-2">
         <!-- Logo / Name Badge Links -->
-        <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 p-0.5 shadow-lg shadow-indigo-500/20 flex items-center justify-center">
+        <div class="flex items-center space-x-2.5 sm:space-x-3 min-w-0">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 p-0.5 shadow-lg shadow-indigo-500/20 flex items-center justify-center shrink-0">
                 <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-extrabold text-indigo-400 text-sm tracking-wider">
                     J
                 </div>
             </div>
-            <div>
-                <h2 class="font-bold text-base sm:text-lg tracking-tight text-white flex items-center gap-2">
-                    Jannik <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <div class="min-w-0">
+                <h2 class="font-bold text-sm sm:text-lg tracking-tight text-white flex items-center gap-1.5 truncate">
+                    Jannik <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
                 </h2>
-                <p class="text-[11px] sm:text-xs text-slate-400">Elektroniker & Amateur Programmierer</p>
+                <p class="text-[10px] sm:text-xs text-slate-400 truncate">Elektroniker & Amateur Programmierer</p>
             </div>
         </div>
 
-        <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
             <!-- Kontakt Button -->
-            <a href="mailto:jannikm5@proton.me" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-medium hover:text-white hover:border-slate-700 transition-all">
-                <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:jannikm5@proton.me" class="inline-flex items-center gap-1.5 px-2.5 sm:px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-medium hover:text-white hover:border-slate-700 transition-all">
+                <svg class="w-3.5 h-3.5 text-indigo-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 <span class="hidden xs:inline">Kontakt</span>
             </a>
 
             <!-- Don't Press Easter Egg Button -->
             <button id="cat-flood-trigger" class="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs transition-all active:scale-95 shrink-0">
                 <span class="absolute inset-0 bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 rounded-xl animate-gradient"></span>
-                <span class="relative block px-3 sm:px-4 py-2 rounded-[11px] bg-slate-950 text-rose-300 group-hover:bg-opacity-80 transition-all font-mono tracking-wider flex items-center gap-1.5 sm:gap-2">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-400 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <span class="relative block px-2.5 sm:px-4 py-2 rounded-[11px] bg-slate-950 text-rose-300 group-hover:bg-opacity-80 transition-all font-mono tracking-wider flex items-center gap-1 sm:gap-2">
+                    <svg class="w-3 h-3 sm:w-4 sm:h-4 text-rose-400 group-hover:rotate-12 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                     <span>Don't Press!</span>
                 </span>
             </button>
@@ -172,10 +172,10 @@
     </header>
 
     <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-6 relative z-10 space-y-8 sm:space-y-10">
+    <main class="max-w-5xl mx-auto px-3 sm:px-6 py-4 sm:py-6 relative z-10 space-y-6 sm:space-y-10">
 
         <!-- Hero Section -->
-        <section class="glass-panel rounded-3xl p-6 sm:p-10 relative overflow-hidden glow-effect">
+        <section class="glass-panel rounded-3xl p-5 sm:p-10 relative overflow-hidden glow-effect">
             <div class="max-w-2xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium mb-4">
                     <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Willkommen auf meiner Seite
@@ -193,23 +193,23 @@
         <section id="stempelheld-section" class="glass-panel rounded-3xl relative overflow-hidden glow-effect border-amber-500/20">
             <details class="group">
                 <!-- Der klickbare Header (Summary) -->
-                <summary class="p-5 sm:p-8 cursor-pointer select-none flex items-center justify-between gap-4 hover:bg-slate-900/40 transition-colors">
-                    <div class="flex items-center gap-4 min-w-0">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 shrink-0">
+                <summary class="p-4 sm:p-8 cursor-pointer select-none flex items-center justify-between gap-3 hover:bg-slate-900/40 transition-colors">
+                    <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+                        <div class="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20 shrink-0">
                             <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-xl sm:text-2xl">
                                 ⏱️
                             </div>
                         </div>
                         <div class="min-w-0">
-                            <div class="flex items-center gap-2 flex-wrap mb-1">
-                                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap mb-1">
+                                <span class="px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
                                     Android App Showcase
                                 </span>
                                 <span class="text-[9px] xs:text-[10px] sm:text-xs font-mono text-slate-400 bg-slate-900/60 px-2 py-0.5 rounded border border-slate-800">Designed for Android, IOS sucks!</span>
                             </div>
-                            <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight truncate">Stempelheld</h2>
+                            <h2 class="text-lg sm:text-2xl font-extrabold text-white tracking-tight truncate">Stempelheld</h2>
 
-                            <p class="text-amber-300/90 text-xs sm:text-sm leading-snug mt-0.5">
+                            <p class="text-amber-300/90 text-xs sm:text-sm leading-snug mt-0.5 truncate">
                                 <span class="sm:hidden">App gegen das Vergessen des Ausstempelns.</span>
                                 <span class="hidden sm:inline">Eine kleine Android-App gegen das Vergessen des Ausstempelns.</span>
                             </p>
@@ -217,7 +217,7 @@
                     </div>
 
                     <!-- Aufklapp-Pfeil -->
-                    <div class="flex items-center gap-2 shrink-0 bg-slate-900/80 border border-slate-800 px-3 py-2 rounded-xl text-xs font-medium text-slate-300 group-hover:border-amber-500/30 transition-all">
+                    <div class="flex items-center gap-2 shrink-0 bg-slate-900/80 border border-slate-800 p-2.5 sm:px-3 sm:py-2 rounded-xl text-xs font-medium text-slate-300 group-hover:border-amber-500/30 transition-all">
                         <svg class="chevron w-4 h-4 text-amber-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
@@ -225,10 +225,10 @@
                 </summary>
 
                 <!-- Der ausklappbare Inhalt -->
-                <div class="p-5 sm:p-10 pt-0 sm:pt-0 border-t border-slate-800/60 mt-2 space-y-8">
+                <div class="p-4 sm:p-10 pt-0 sm:pt-0 border-t border-slate-800/60 mt-2 space-y-6 sm:space-y-8">
 
                     <!-- Story & Context Card -->
-                    <div class="glass-card rounded-2xl p-5 sm:p-6 border-l-4 border-l-amber-500 mt-6">
+                    <div class="glass-card rounded-2xl p-4 sm:p-6 border-l-4 border-l-amber-500 mt-4 sm:mt-6">
                         <h3 class="text-xs font-extrabold uppercase tracking-widest text-amber-400 mb-2">Hintergrund & Geschichte</h3>
                         <p class="text-slate-300 text-xs sm:text-base leading-relaxed">
                             Ich hatte immer wieder das Problem, meine Arbeitszeit nicht rechtzeitig zu beenden oder schlicht zu vergessen, auszustempeln. Diese App wurde entwickelt, um genau dabei zu helfen.
@@ -238,34 +238,34 @@
                     <!-- "So funktioniert's" Step-by-Step Grid -->
                     <div>
                         <h3 class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 mb-4 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                             So funktioniert's
                         </h3>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             <!-- Step 1 -->
-                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                            <div class="glass-card rounded-2xl p-4 sm:p-5 relative overflow-hidden group">
                                 <div class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-bold text-sm mb-3 border border-indigo-500/30">1</div>
                                 <h4 class="font-bold text-white text-sm mb-1">Einstempeln</h4>
                                 <p class="text-xs text-slate-300 leading-relaxed">Einstempelzeit eingeben</p>
                             </div>
 
                             <!-- Step 2 -->
-                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                            <div class="glass-card rounded-2xl p-4 sm:p-5 relative overflow-hidden group">
                                 <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold text-sm mb-3 border border-purple-500/30">2</div>
                                 <h4 class="font-bold text-white text-sm mb-1">Automatische Berechnung</h4>
                                 <p class="text-xs text-slate-300 leading-relaxed">Die App berechnet automatisch die entsprechende Ausstempelzeit.</p>
                             </div>
 
                             <!-- Step 3 -->
-                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                            <div class="glass-card rounded-2xl p-4 sm:p-5 relative overflow-hidden group">
                                 <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold text-sm mb-3 border border-amber-500/30">3</div>
                                 <h4 class="font-bold text-white text-sm mb-1">Erinnerung erhalten</h4>
                                 <p class="text-xs text-slate-300 leading-relaxed">15 Minuten vorher erhältst du eine Benachrichtigung.</p>
                             </div>
 
                             <!-- Step 4 -->
-                            <div class="glass-card rounded-2xl p-5 relative overflow-hidden group">
+                            <div class="glass-card rounded-2xl p-4 sm:p-5 relative overflow-hidden group">
                                 <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold text-sm mb-3 border border-emerald-500/30">4</div>
                                 <h4 class="font-bold text-white text-sm mb-1">Pünktlich Feierabend</h4>
                                 <p class="text-xs text-slate-300 leading-relaxed">So bleibt genügend Zeit, um rechtzeitig auszustempeln.</p>
@@ -276,13 +276,13 @@
                     <!-- Screenshots Gallery -->
                     <div>
                         <h3 class="text-xs font-extrabold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                             App Screenshot
                         </h3>
 
                         <!-- Single Framed Screenshot Container / Drop Slot -->
-                        <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center border-2 border-dashed border-slate-700/80 hover:border-amber-500/50 transition-colors">
-                            <div class="max-w-[240px] sm:max-w-xs w-full aspect-[9/19] rounded-3xl bg-slate-900 border-4 border-slate-800 shadow-2xl overflow-hidden relative group flex flex-col items-center justify-center">
+                        <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center border-2 border-dashed border-slate-700/85 hover:border-amber-500/50 transition-colors">
+                            <div class="max-w-[220px] sm:max-w-xs w-full aspect-[9/19] rounded-3xl bg-slate-900 border-4 border-slate-800 shadow-2xl overflow-hidden relative group flex flex-col items-center justify-center">
                                 <img
                                     src="stempelheld-screenshot.png"
                                     alt="Stempelheld App Screenshot"
@@ -307,9 +307,9 @@
 
                     <!-- GitHub Download Link Button Centered -->
                     <div class="pt-6 border-t border-slate-800/80 flex justify-center">
-                        <a href="https://github.com/jannikm00/Stempelheld/releases" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-indigo-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-amber-500/20 hover:scale-[1.02] active:scale-95 transition-all">
+                        <a href="https://github.com/jannikm00/Stempelheld/releases" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-indigo-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-amber-500/20 hover:scale-[1.02] active:scale-95 transition-all text-center">
                             <span>Zum Download</span>
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                         </a>
                     </div>
 
@@ -318,12 +318,12 @@
         </section>
 
         <!-- Spotify Favorite Track Section -->
-        <section class="glass-panel rounded-3xl p-5 sm:p-8 relative overflow-hidden glow-effect">
+        <section class="glass-panel rounded-3xl p-4 sm:p-8 relative overflow-hidden glow-effect">
             <div class="flex items-center gap-2 mb-4">
-                <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.599-.12-.42.18-.78.6-.9 4.56-1.021 8.52-.6 11.76 1.44.36.24.48.66.24 1.02zm1.44-3.84c-.301.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.411-.48.14-1.019-.12-1.159-.6-.14-.48.12-1.02.6-1.16 4.2-1.26 9.6-.6 13.56 1.8 4.2.3.9.72 1.2 1.371zm.12-4.08C14.7 7.32 8.52 7.14 4.98 8.22c-.6.18-1.2-.18-1.38-.78-.18-.6.18-1.2.78-1.38 4.02-1.2 10.8-1.02 15.12 1.56.54.36.72 1.08.36 1.62-.36.54-1.08.72-1.62.36z"/></svg>
+                <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.599-.12-.42.18-.78.6-.9 4.56-1.021 8.52-.6 11.76 1.44.36.24.48.66.24 1.02zm1.44-3.84c-.301.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.411-.48.14-1.019-.12-1.159-.6-.14-.48.12-1.02.6-1.16 4.2-1.26 9.6-.6 13.56 1.8 4.2.3.9.72 1.2 1.371zm.12-4.08C14.7 7.32 8.52 7.14 4.98 8.22c-.6.18-1.2-.18-1.38-.78-.18-.6.18-1.2.78-1.38 4.02-1.2 10.8-1.02 15.12 1.56.54.36.72 1.08.36 1.62-.36.54-1.08.72-1.62.36z"/></svg>
                 <h3 class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Aktueller Lieblingssong</h3>
             </div>
-            <div class="rounded-2xl overflow-hidden glass-card p-2">
+            <div class="rounded-2xl overflow-hidden glass-card p-1.5 sm:p-2">
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6c9EGVj5CaOeoKd9ecMW1U?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </section>
@@ -332,46 +332,46 @@
         <section>
             <h3 class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 mb-4 px-1">Profile & Links</h3>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                 <!-- GitHub Profile -->
-                <a href="https://github.com/jannikm00/" target="_blank" class="glass-card rounded-2xl p-4 sm:p-5 flex items-center space-x-4 group">
-                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center p-2.5 shrink-0 group-hover:border-indigo-500/50 transition-colors">
+                <a href="https://github.com/jannikm00/" target="_blank" class="glass-card rounded-2xl p-4 sm:p-5 flex items-center space-x-3.5 sm:space-x-4 group">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center p-2.5 shrink-0 group-hover:border-indigo-500/50 transition-colors">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="w-full h-full filter invert" onerror="this.src='https://placehold.co/50x50/000000/ffffff?text=GH'">
                     </div>
-                    <div>
-                        <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                    <div class="min-w-0">
+                        <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-indigo-400 transition-colors flex items-center gap-1.5 truncate">
                             GitHub
-                            <svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            <svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-indigo-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </h4>
-                        <p class="text-xs text-slate-400 mt-0.5">Open-Source Projekte & Code.</p>
+                        <p class="text-xs text-slate-400 mt-0.5 truncate">Open-Source Projekte & Code.</p>
                     </div>
                 </a>
 
                 <!-- Thingiverse Profile -->
-                <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank" class="glass-card rounded-2xl p-4 sm:p-5 flex items-center space-x-4 group">
-                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/50 border border-cyan-800/40 flex items-center justify-center p-2.5 shrink-0 group-hover:border-cyan-400/50 transition-colors">
+                <a href="https://www.thingiverse.com/jannikm00/designs" target="_blank" class="glass-card rounded-2xl p-4 sm:p-5 flex items-center space-x-3.5 sm:space-x-4 group">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-950/50 border border-cyan-800/40 flex items-center justify-center p-2.5 shrink-0 group-hover:border-cyan-400/50 transition-colors">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Thingiverse_Logo_192x192.png" alt="Thingiverse Logo" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/50x50/22b8cf/ffffff?text=TV'">
                     </div>
-                    <div>
-                        <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                    <div class="min-w-0">
+                        <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-cyan-400 transition-colors flex items-center gap-1.5 truncate">
                             Thingiverse
-                            <svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            <svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </h4>
-                        <p class="text-xs text-slate-400 mt-0.5">3D-Druck Modelle & Designs.</p>
+                        <p class="text-xs text-slate-400 mt-0.5 truncate">3D-Druck Modelle & Designs.</p>
                     </div>
                 </a>
 
                 <!-- Steam Profile -->
-                <a href="https://steamcommunity.com/id/j4nn1km00/" target="_blank" class="glass-card rounded-2xl p-4 sm:p-5 flex items-center space-x-4 group">
-                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center p-2.5 shrink-0 group-hover:border-blue-500/50 transition-colors">
+                <a href="https://steamcommunity.com/id/j4nn1km00/" target="_blank" class="glass-card rounded-2xl p-4 sm:p-5 flex items-center space-x-3.5 sm:space-x-4 group">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center p-2.5 shrink-0 group-hover:border-blue-500/50 transition-colors">
                         <svg class="w-full h-full text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.524-4.524 4.524h-.105l-4.076 2.911c.002.052.006.105.006.158 0 1.807-1.465 3.276-3.276 3.276-1.55 0-2.856-1.076-3.198-2.518L.38 15.116C1.722 20.252 6.41 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zM9.54 15.347c0 .033-.004.065-.008.098l-1.921-.794c.045-.221.139-.422.275-.591.393-.491 1.096-.583 1.589-.203.418.323.565.882.365 1.365zm4.896-6.437c0-1.42 1.152-2.572 2.572-2.572s2.572 1.152 2.572 2.572-1.152 2.572-2.572 2.572-2.572-1.152-2.572-2.572zm2.572-1.286c-.71 0-1.286.576-1.286 1.286s.576 1.286 1.286 1.286 1.286-.576 1.286-1.286-.576-1.286-1.286-1.286z"/></svg>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-blue-400 transition-colors flex items-center gap-1.5">
+                    <div class="min-w-0">
+                        <h4 class="font-bold text-sm sm:text-base text-white group-hover:text-blue-400 transition-colors flex items-center gap-1.5 truncate">
                             Steam
-                            <svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            <svg class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                         </h4>
-                        <p class="text-xs text-slate-400 mt-0.5">Steam Profil.</p>
+                        <p class="text-xs text-slate-400 mt-0.5 truncate">Steam Profil.</p>
                     </div>
                 </a>
             </div>
@@ -380,7 +380,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-12 text-center text-xs text-slate-500 border-t border-slate-800/60 mt-12 space-y-2 relative z-10">
+    <footer class="max-w-5xl mx-auto px-3 sm:px-6 py-8 sm:py-12 text-center text-xs text-slate-500 border-t border-slate-800/60 mt-8 sm:mt-12 space-y-2 relative z-10">
         <p>Kontaktiere mich: <a href="mailto:jannikm5@proton.me" class="text-indigo-400 hover:underline">jannikm5@proton.me</a></p>
         <p>&copy; 2026 Jannik</p>
     </footer>
@@ -523,15 +523,14 @@
 
                 // Fallback icon if local image flocki.png isn't available
                 cat.onerror = function() {
-                    this.src = 'https://placehold.co/60x60/ec4899/ffffff?text=🐱';
+                    this.src = 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg';
                 };
 
                 document.body.appendChild(cat);
 
-                // Auto-cleanup DOM after animation finishes
                 setTimeout(() => {
                     cat.remove();
-                }, 10000);
+                }, 4000);
             }
         });
     </script>
